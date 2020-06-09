@@ -1,0 +1,271 @@
+/* maymar colors 
+#C61130  red
+#004B8B  blue
+#FAEA10  yellow
+#E5E4E2  gray
+
+#CBC9C5 mid gray button
+#B4B6BB dark gray button
+
+*/
+
+html {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 2em;
+  margin: 0em;
+}
+
+header {
+  max-height: 10%;
+  position: sticky;
+  top: 0;
+  background: #E5E4E2;
+  border-block-end: .1em solid #004B8B;
+  z-index: 10;
+}
+
+
+.header_logo {
+  width: 16vw;
+  height: 10vh;
+  border-radius: 3%;
+}
+
+
+.phone_number {
+  padding: 1em;
+  color: #C61130;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* ul */
+.nav {
+  padding-inline-start: 0px;
+  margin: 0;
+}
+
+/* ul list items */
+.nav li {
+  /* border: 1pt solid red; */
+  margin: 1em;
+  list-style: none;
+  background-color: #B4B6BB;
+  border-radius: .1em;
+  padding: .5em 1.5em;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.main-image {
+  display: block;
+  margin: 0 auto;
+  border-radius: 3%;
+  /* width: 60vw;
+  height: 80vh; */
+}
+
+
+/* mobile - small */
+/*
+@media (max-width: 700px) {
+  .header_logo {
+    width: 50vw;
+    height: 15vh;
+  }
+  header {
+    position: static;
+  }
+}
+*/
+
+/* tablet - mid */
+@media (max-width: 800px) {
+    .time {
+      display: block;
+    }
+
+    .time div h4, .time div p {
+      padding: 0;
+      margin: 1em;
+    }
+  }
+
+/* computer - large */
+@media (min-width: 400px) {
+
+  ul.nav li {
+    display: inline-block;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contact {
+    margin: 0 auto;
+    max-width: 70%;
+  }
+
+  .time {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-block-end: 1em;
+  }
+
+  .location {
+    /* border: 2pt solid red; */
+    border-block-start: .1em solid #CBC9C5;
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5em;
+  }
+}
+
+
+
+
+
+.main-text {
+  text-align: center;
+}
+
+address {
+  align-self: center;
+  min-width: 10em;
+  border: 1pt solid black;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em;
+}
+
+address h3 {
+  text-decoration: underline;
+}
+
+.contact h3 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.map {
+  /* padding-bottom: is calculated by the 16:9 ratio. 9/16 * 100 = 56.25 */
+  padding-bottom: 40%; 
+  position: relative;
+  height: 0;
+  border: 1pt solid #000;
+  width: 50%;
+  height: 0em;
+}
+
+/* the map info. position absolute sets the map relative to the parent element (div). height and width 100% fills the div. top and left aligns the map iframe to the top left of the div. */
+.map iframe{
+  position:absolute;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+}
+
+.time div {
+  border: 1pt solid black;
+  border-radius: 5%;
+  padding: .3vw;
+  text-align: center;
+}
+
+hr {
+  border: 1pt solid #B4B6BB;
+}
+
+.contact {
+  background-color: #E5E4E2;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-heading {
+  text-align: center;
+  margin: .5em;
+  text-decoration: underline;
+}
+
+.menu img {
+  border: 1pt solid black;
+  margin: 1em;
+}
+
+/* FOOTER */
+footer {
+  /* border: 1pt solid red; */
+  background-color: #E5E4E2;
+  border-block-start: .1em solid #004B8B;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+}
+
+footer p {
+  text-align: center;
+  margin: 1em;
+}
+
+.social-media {
+  /* border: 1pt solid blue; */
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+}
+
+.social-media a {
+  /* border: 1pt solid blue; */
+  width: 1.5em;
+  height: 1.5em;
+  margin: .7em;
+  align-self: flex-start;
+}
+
+.icon-credit {
+  color: rgb(163, 162, 162);
+  font-size: .5em;
+  text-align: center;
+}
+
+.icon-credit a {
+  text-decoration: none;
+  color: rgb(163, 162, 162);
+}
+
+
+/* -- PHOTOS -- */
+.photos {
+  /* border: 1pt solid red; */
+  margin: 0 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.photos img {
+  /* border: 2pt solid black; */
+  width: 17em;
+  height: 17em;
+  margin: 1em;
+}
