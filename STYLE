@@ -6,13 +6,12 @@
 
 #CBC9C5 mid gray button
 #B4B6BB dark gray button
-
 */
 
 html {
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 body {
@@ -20,52 +19,23 @@ body {
   margin: 0em;
 }
 
-header {
-  max-height: 10%;
+#header {
   position: sticky;
   top: 0;
-  background: #E5E4E2;
-  border-block-end: .1em solid #004B8B;
-  z-index: 10;
+  background: white;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .5);
 }
 
 
-.header_logo {
-  width: 16vw;
-  height: 10vh;
-  border-radius: 3%;
+.header-logo {
+  width: 11em;
+  height: 3.5em;
+  padding: 2vh;
 }
 
 
-.phone_number {
-  padding: 1em;
-  color: #C61130;
-  font-weight: bold;
-  background-color: #fff;
-  border-radius: 50%;
-}
 
-/* ul */
-.nav {
-  padding-inline-start: 0px;
-  margin: 0;
-}
 
-/* ul list items */
-.nav li {
-  /* border: 1pt solid red; */
-  margin: 1em;
-  list-style: none;
-  background-color: #B4B6BB;
-  border-radius: .1em;
-  padding: .5em 1.5em;
-  text-decoration: none;
-  color: #000;
-}
-
-.nav a {
-  text-decoration: none;
-}
 
 .main-image {
   display: block;
@@ -75,66 +45,156 @@ header {
   height: 80vh; */
 }
 
+/* small display */
+@media (max-width: 1000px) {
 
-/* mobile - small */
-/*
-@media (max-width: 700px) {
-  .header_logo {
-    width: 50vw;
-    height: 15vh;
-  }
-  header {
-    position: static;
-  }
-}
-*/
+  /* hamburger menu */
 
-/* tablet - mid */
-@media (max-width: 800px) {
-    .time {
-      display: block;
-    }
-
-    .time div h4, .time div p {
-      padding: 0;
-      margin: 1em;
-    }
+  .header-logo {
+    float: left;
   }
 
-/* computer - large */
-@media (min-width: 400px) {
-
-  ul.nav li {
-    display: inline-block;
+  #header .menu-bar {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
   }
 
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .menu-bar li {
+    background: white;
+    list-style-type: none;
   }
 
-  .contact {
-    margin: 0 auto;
-    max-width: 70%;
+  .menu-bar a {
+    color: #000;
+    /* a tags are normally inline. setting it to block allows you to click on the white area next to it */
+    display: block;
+    outline: 1px solid red;
+    padding: 2vh;
+    border-right: 1px solid #aaa;
+    text-decoration: none;
+  }
+
+  .menu-bar a:hover {
+    background-color: #ddd;
+  }
+
+  #header .menu-bar {
+    clear: both;
+    max-height: 0px;
+    transition: max-height .2s ease-out;
+  }
+
+  #header .hamburger-icon {
+    padding: 50px 30px;
+    /* position is relative so the children can be set as absolute */
+    position: relative;
+    float: right;
+    cursor: pointer;
+  }
+
+  /* nav-icon */
+  #header .hamburger-icon .nav-icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .35s ease-out;
+  }
+
+  #header .hamburger-icon .nav-icon::before {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+  }
+
+  #header .hamburger-icon .nav-icon::after {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+  }
+
+  #header .hamburger-btn {
+    display: none;
+  }
+
+  /*  the tilde separates two sequences of selectors. the elements represented by the two sequences share the same parent in the document tree.
+  first-sequence occurs THEN(~) second sequence. */
+  #header .hamburger-btn:checked ~ .menu-bar {
+    max-height: 240px;
+  }
+
+  /* nav-icon animation */
+  #header .hamburger-btn:checked ~ .hamburger-icon .nav-icon {
+    background: transparent;
+  }
+
+  #header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  #header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  /* END hamburger menu */
+
+  .nav {
+    display: none;
   }
 
   .time {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-block-end: 1em;
+    display: block;
   }
 
-  .location {
-    /* border: 2pt solid red; */
-    border-block-start: .1em solid #CBC9C5;
-    display: flex;
-    justify-content: space-around;
-    padding: 1.5em;
+  .time div h4, .time div p {
+    padding: 0;
+    margin: 1em;
   }
+} /* small display */
+
+ul.nav li {
+  display: inline-block;
 }
 
+/* header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+.contact {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+.time {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-block-end: 1em;
+}
+
+.location {
+  /* border: 2pt solid red; */
+  border-block-start: .1em solid #CBC9C5;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5em;
+}
 
 
 
@@ -179,6 +239,7 @@ address h3 {
   left:0;
   top:0;
 }
+
 
 .time div {
   border: 1pt solid black;
@@ -257,10 +318,9 @@ footer p {
 /* -- PHOTOS -- */
 .photos {
   /* border: 1pt solid red; */
-  margin: 0 10%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .photos img {
