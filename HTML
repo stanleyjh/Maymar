@@ -10,7 +10,6 @@
     <link rel="favicon" sizes="180x180" href="images/favicon_io/maymar-favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
 
     <link rel="stylesheet" href="css.css" type="text/css">
 </head>
@@ -19,108 +18,118 @@
 
   <!-- https://www.discocheetah.com/ -->
 
-  <header>
-      <a href="index.html"><img class="header_logo" src="images/text_logo.png"></a>
-      <p class="phone_number">Phone # (757) 222-5543</p>
-    <nav>
-      <ul class="nav">
-        <a href="index.html#menu"><li>Menu</li></a>
-        <a href="#contact"><li>Hours & Location</li></a>
-        <a href="photos.html"><li>Photos</li></a>
-      </ul>
-    </nav>
+  <header id="header">
+    <a href="#"><img class="header-logo" src="images/text_logo.png"></a>
+    
+
+    <input class="hamburger-btn" type="checkbox" id="hamburger-btn">
+    <!-- "for" attribute allows a link to the input above "hamburger-btn"  -->
+    <label class="hamburger-icon" for="hamburger-btn"><span class="nav-icon"></span></label>
+    <ul class="menu-bar">
+      <li><a href="index.html#menu">Menu</a></li>
+      <li><a href="#contact">Hours & Location</a></li>
+      <li><a href="photos.html">Photos</a></li>
+    </ul>
   </header>
 
-  <main>
-      <p class="main-text">Maymar Poke & Grill serves poke, pancit, lumpia and other classic Filipino chow. </p>
-      <img class="main-image" 
-      srcset="images/poke7_1400.jpg 1400w,
-              images/poke7_703.jpg 703w
-              images/poke7_449.jpg 340w"
-      sizes="(max-width: 700px) 340px,
-             (max-width: 800px) 703px,
-             1400px"
-      src="images/poke7_1400.jpg" 
-      alt="poke image">
+  <!-- https://www.youtube.com/watch?v=sjrp1FEHnyA -->
 
-    <hr>
-    <div class="contact" id="contact">
-      <h3>Hours of Operation</h3>
-      <div class="time">
-        <div>
-          <h4>Monday</h4>
-          <p>Closed</p>
-        </div>
+<main>
+  <p class="main-text">Maymar Poke & Grill serves poke, pancit, lumpia and other classic Filipino chow. </p>
 
-        <div>
-          <h4>Tuesday</h4>
-          <p>11AM - 6PM</p>
-        </div>
-
-        <div>
-          <h4>Wednesday</h4>
-          <p>11AM - 6PM</p>
-        </div>
-
-        <div>
-          <h4>Thursday</h4>
-          <p>11AM - 6PM</p>
-        </div>
-
-        <div>
-          <h4>Friday</h4>
-          <p>11AM - 6PM</p>
-        </div>
-
-        <div>
-          <h4>Saturday</h4>
-          <p>9AM - 5PM</p>
-        </div>
-
-        <div>
-          <h4>Sunday</h4>
-          <p>Closed</p>
-        </div>
-      </div>
-
-      
-      <div class="location">
-        
-        <address>
-          <h3>Location</h3>
-          <strong>Maymar Poke and Grill</strong><br><br>
-          130 Maple Ave.<br>
-          Ste. A<br>
-          Norfolk, VA 23503<br>
-        </address>
-      
-        <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.610573137041!2d-76.261035985144!3d36.94747206709618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ba909751d1766d%3A0xcc49862e9864d8d7!2sMaymar%20Poke%20and%20Grill!5e0!3m2!1sen!2sus!4v1582059633302!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </div>
-      </div>
-      
-
+  <!--
+  <img class="main-image" 
+  srcset="images/poke7_1400.jpg 1400w,
+          images/poke7_703.jpg 703w
+          images/poke7_449.jpg 340w"
+  sizes="(max-width: 700px) 340px,
+         (max-width: 800px) 703px,
+         1400px"
+  src="images/poke7_1400.jpg" 
+  alt="poke image">
+  -->
+<hr>
+<div class="contact" id="contact">
+  <h3>Hours of Operation</h3>
+  <div class="time">
+    <div>
+      <h4>Monday</h4>
+      <p>Closed</p>
     </div>
 
-    <hr>
-    <h3 class="menu-heading">Menu</h3>
-    <div class="menu" id="menu">
-      <img src="images/poke_menu.jpg">
-      <img src="images/menu.jpg">
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; All rights reserved. Website created by Stanley Ho.</p>
-
-    <div class="social-media">
-      <!-- Credit for the SVG icons: https://www.flaticon.com/authors/freepik -->
-      <a href="https://www.facebook.com/MaymarPoke/" target="_blank"><img src="images/facebook.svg" alt="facebook"></a>
-      <a href="https://www.instagram.com/explore/locations/123161578355986/maymar-poke-and-grill?hl=en" target="_blank"><img src="images/instagram.svg" alt="instagram"></a>
-      <a href="https://twitter.com/hashtag/maymarpoke" target="_blank"><img src="images/twitter.svg"></a>
-      <a href="https://www.yelp.com/biz/maymar-poke-and-grill-norfolk" target="_blank"><img src="images/yelp.svg"></a>
+    <div>
+      <h4>Tuesday</h4>
+      <p>11AM - 6PM</p>
     </div>
 
-  </footer>
+    <div>
+      <h4>Wednesday</h4>
+      <p>11AM - 6PM</p>
+    </div>
+
+    <div>
+      <h4>Thursday</h4>
+      <p>11AM - 6PM</p>
+    </div>
+
+    <div>
+      <h4>Friday</h4>
+      <p>11AM - 6PM</p>
+    </div>
+
+    <div>
+      <h4>Saturday</h4>
+      <p>9AM - 5PM</p>
+    </div>
+
+    <div>
+      <h4>Sunday</h4>
+      <p>Closed</p>
+    </div>
+  </div>
+
+  
+  <div class="location">
+    
+  <address>
+    <h3>Location</h3>
+    <strong>Maymar Poke and Grill</strong><br><br>
+    130 Maple Ave.<br>
+    Ste. A<br>
+    Norfolk, VA 23503<br>
+  </address>
+  
+  <!-- map causing a cookie error
+  <div class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.610573137041!2d-76.261035985144!3d36.94747206709618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ba909751d1766d%3A0xcc49862e9864d8d7!2sMaymar%20Poke%20and%20Grill!5e0!3m2!1sen!2sus!4v1582059633302!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+  </div>
+  -->
+
+</div>
+
+<hr>
+<h3 class="menu-heading">Menu</h3>
+<div class="menu" id="menu">
+  <img src="images/poke_menu.jpg">
+  <img src="images/menu.jpg">
+</div>
+</main>
+
+
+<footer>
+<p>&copy; All rights reserved. Website created by Stanley Ho.</p>
+
+<!-- Credit for the SVG icons: https://www.flaticon.com/authors/freepik -->
+<div class="social-media">
+
+  <a href="https://www.facebook.com/MaymarPoke/" target="_blank"><img src="images/facebook.svg" alt="facebook"></a>
+  <a href="https://www.instagram.com/explore/locations/123161578355986/maymar-poke-and-grill?hl=en" target="_blank"><img src="images/instagram.svg" alt="instagram"></a>
+  <a href="https://twitter.com/hashtag/maymarpoke" target="_blank"><img src="images/twitter.svg"></a>
+  <a href="https://www.yelp.com/biz/maymar-poke-and-grill-norfolk" target="_blank"><img src="images/yelp.svg"></a>
+</div>
+
+</footer>
+  
+<script src="script.js" type="text/JavaScript"></script>
 </body>
 </html>
