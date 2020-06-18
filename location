@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maymar Poke & Grill</title>
+  <meta charset="UTF-8">
+
+  <link rel="favicon" sizes="180x180" href="images/favicon_io/maymar-favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html"><img class="header-logo" src="images/text_logo.png"></a>
+
+    <input class="hamburger-btn" type="checkbox" id="hamburger-btn">
+    <label class="hamburger-icon" for="hamburger-btn"><span class="nav-icon"></span></label>
+    <ul class="menu-bar">
+      <li><a href="">TEST</a></li>
+      <li><a href="">TEST</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="contact">
+      <h3>Hours of Operation</h3>
+      <div class="time">
+        <div>
+          <h4>Monday</h4>
+          <p>Closed</p>
+        </div>
+    
+        <div>
+          <h4>Tuesday</h4>
+          <p>11AM - 6PM</p>
+        </div>
+    
+        <div>
+          <h4>Wednesday</h4>
+          <p>11AM - 6PM</p>
+        </div>
+    
+        <div>
+          <h4>Thursday</h4>
+          <p>11AM - 6PM</p>
+        </div>
+    
+        <div>
+          <h4>Friday</h4>
+          <p>11AM - 6PM</p>
+        </div>
+    
+        <div>
+          <h4>Saturday</h4>
+          <p>9AM - 5PM</p>
+        </div>
+    
+        <div>
+          <h4>Sunday</h4>
+          <p>Closed</p>
+        </div>
+      </div>
+  </main>
+
+
+</body>
+</html>
