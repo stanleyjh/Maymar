@@ -8,6 +8,11 @@
 #B4B6BB dark gray button
 */
 
+/*
+  References:
+  creating the header bar: FollowAndrew https://www.youtube.com/watch?v=sjrp1FEHnyA
+*/
+
 .large {
   display: none;
 }
@@ -24,8 +29,7 @@ body {
 }
 
 
-
-#header {
+.header {
   position: sticky;
   top: 0;
   background: white;
@@ -44,7 +48,7 @@ body {
     float: left;
   }
 
-  #header ul {
+  .header ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -70,27 +74,28 @@ body {
 
   .menu-bar a:hover {
     color: #004B8B;
-    /* background: #ddd; */
   }
 
-  #header .menu-bar {
+  .header .menu-bar {
     clear: both;
     max-height: 0px;
-    transition: max-height .3s ease-out;
+    /* menu-bar transition speed */
+    transition: max-height .4s ease-out;
   }
 
-  #header .hamburger-icon {
+  .header .hamburger-icon {
     padding: 55px 30px;
     /* position is relative so the children can be set as absolute */
     position: relative;
     float: right;
     cursor: pointer;
-    z-index: 5;
+    /* z-index: 5; */
   }
 
+
   /* nav-icon */
-  #header .hamburger-icon .nav-icon {
-    background: #333;
+  .header .hamburger-icon .nav-icon {
+    background: #C61130;
     display: block;
     height: 2.4px;
     width: 30px;
@@ -98,8 +103,8 @@ body {
     transition: background .05s ease-out;
   }
 
-  #header .hamburger-icon .nav-icon::before {
-    background: #333;
+  .header .hamburger-icon .nav-icon::before {
+    background: #C61130;
     content: "";
     display: block;
     height: 100%;
@@ -109,8 +114,8 @@ body {
     top: 8px;
   }
 
-  #header .hamburger-icon .nav-icon::after {
-    background: #333;
+  .header .hamburger-icon .nav-icon::after {
+    background: #C61130;
     content: "";
     display: block;
     height: 100%;
@@ -120,27 +125,29 @@ body {
     top: -8px;
   }
 
-  #header .hamburger-btn {
+  .header .hamburger-btn {
     display: none;
   }
 
   /*  the tilde separates two sequences of selectors. the elements represented by the two sequences share the same parent in the document tree.
   first-sequence occurs THEN(~) second sequence. */
-  #header .hamburger-btn:checked ~ .menu-bar {
-    max-height: 240px;
+  .header .hamburger-btn:checked ~ .menu-bar {
+    max-height: 400px;
   }
 
   /* nav-icon animation */
-  #header .hamburger-btn:checked ~ .hamburger-icon .nav-icon {
+  .header .hamburger-btn:checked ~ .hamburger-icon .nav-icon {
     background: transparent;
   }
 
-  #header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::before {
+  .header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::before {
+    background: #004B8B;
     transform: rotate(-45deg);
     top: 0;
   }
 
-  #header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::after {
+  .header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::after {
+    background: #004B8B;
     transform: rotate(45deg);
     top: 0;
   }
@@ -162,17 +169,7 @@ ul.nav li {
   display: inline-block;
 }
 
-.contact {
-  margin: 0 auto;
-  max-width: 70%;
-}
 
-.time {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-block-end: 1em;
-}
 
 .location {
   border-block-start: .1em solid #CBC9C5;
@@ -199,11 +196,6 @@ address {
 
 address h3 {
   text-decoration: underline;
-}
-
-.contact h3 {
-  text-decoration: underline;
-  text-align: center;
 }
 
 .map {
@@ -235,10 +227,6 @@ address h3 {
 
 hr {
   border: 1pt solid #B4B6BB;
-}
-
-.contact {
-  background-color: #E5E4E2;
 }
 
 /* MENU */
@@ -287,7 +275,6 @@ footer p {
   /* background-color: blue; */
   margin: 0;
 }
-
 /* END FOOTER */
 
 
@@ -308,6 +295,28 @@ footer p {
 }
 /* END PHOTOS */
 
+/* location */
+
+
+.contact h3 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.contact {
+  background-color: #E5E4E2;
+}
+
+.time {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-block-end: 1em;
+}
+
+
+/* END location */
+
 /* large display */
 @media (min-width: 960px) {
 
@@ -315,19 +324,20 @@ footer p {
     display: block;
   }
 
-  #header {
-    height: 11vh;
+  /* header */
+  .header {
+    height: 13vh;
   }
 
-  #header li {
+  .header li {
     float: left;
   }
 
-  #header li a {
+  .header li a {
     padding: 20px 30px;
   }
 
-  #header .menu-bar {
+  .header .menu-bar {
     margin: 2vh;
     
     clear: none;
@@ -335,14 +345,15 @@ footer p {
     max-height: none;
   }
 
-  #header .menu-bar li a {
+  .header .menu-bar li a {
     border: none;
     outline: none;
     border-radius: 2vh;
   }
 
-  #header .hamburger-icon {
+  .header .hamburger-icon {
     display: none;
   }
+  /* END header */
 
 } /* large display */
