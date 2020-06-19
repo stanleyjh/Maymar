@@ -13,6 +13,8 @@
   creating the header bar: FollowAndrew https://www.youtube.com/watch?v=sjrp1FEHnyA
 */
 
+
+/* index.html-------------------- */
 .large {
   display: none;
 }
@@ -28,6 +30,13 @@ body {
   margin: 0;
 }
 
+h1, h2 {
+  color: #C61130;
+}
+
+h3, h4 {
+  color: #004B8B;
+}
 
 .header {
   position: sticky;
@@ -40,7 +49,7 @@ body {
 .header-logo {
   width: 11em;
   height: 3.5em;
-  padding: 2vh;
+  margin: 2vh;
 }
 
 /* hamburger menu */
@@ -97,7 +106,7 @@ body {
   .header .hamburger-icon .nav-icon {
     background: #C61130;
     display: block;
-    height: 2.4px;
+    height: 2px;
     width: 30px;
     position: relative;
     transition: background .05s ease-out;
@@ -153,8 +162,6 @@ body {
   }
 /* END hamburger menu */
 
-
-
 .main-image {
   display: block;
   margin: 0 auto;
@@ -163,65 +170,7 @@ body {
   height: 80vh; */
 }
 
-
-
-ul.nav li {
-  display: inline-block;
-}
-
-
-
-.location {
-  border-block-start: .1em solid #CBC9C5;
-  display: flex;
-  justify-content: space-around;
-  padding: 1.5em;
-}
-
-
-
-
 .main-text {
-  text-align: center;
-}
-
-address {
-  align-self: center;
-  min-width: 10em;
-  border: 1pt solid black;
-  border-radius: 1em;
-  padding: 1em;
-  margin: 1em;
-}
-
-address h3 {
-  text-decoration: underline;
-}
-
-.map {
-  /* padding-bottom: is calculated by the 16:9 ratio. 9/16 * 100 = 56.25 */
-  padding-bottom: 40%; 
-  position: relative;
-  height: 0;
-  border: 1pt solid #000;
-  width: 50%;
-  height: 0em;
-}
-
-/* the map info. position absolute sets the map relative to the parent element (div). height and width 100% fills the div. top and left aligns the map iframe to the top left of the div. */
-.map iframe{
-  position:absolute;
-  height:100%;
-  width:100%;
-  left:0;
-  top:0;
-}
-
-
-.time div {
-  border: 1pt solid black;
-  border-radius: 5%;
-  padding: .3vw;
   text-align: center;
 }
 
@@ -276,6 +225,53 @@ footer p {
   margin: 0;
 }
 /* END FOOTER */
+/* END index.html ----------------*/
+
+
+
+/* location.html ---------------- */
+.location-header {
+  text-align: center;
+  margin: 0;
+  padding: 3vh 0 1vh 0;
+  background: #E5E4E2;
+}
+
+.location {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  justify-content: center;
+  align-items: center;
+  background: #E5E4E2;
+}
+
+.location h3 {
+  margin: 1rem 0 ;
+}
+
+.time p {
+  margin: .5rem 0;
+}
+
+.time, .address {
+  margin: 1rem 6rem;
+}
+
+.time {
+  /* outline: 1px solid red; */
+  text-align: center;
+}
+
+.address {
+  /* outline: 1px solid blue; */
+}
+
+.map {
+  margin: 3rem 6rem;
+}
+
+/* END location.html------------------ */
 
 
 
@@ -295,27 +291,6 @@ footer p {
 }
 /* END PHOTOS */
 
-/* location */
-
-
-.contact h3 {
-  text-decoration: underline;
-  text-align: center;
-}
-
-.contact {
-  background-color: #E5E4E2;
-}
-
-.time {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-block-end: 1em;
-}
-
-
-/* END location */
 
 /* large display */
 @media (min-width: 960px) {
@@ -326,7 +301,7 @@ footer p {
 
   /* header */
   .header {
-    height: 13vh;
+    height: 11vh;
   }
 
   .header li {
