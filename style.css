@@ -28,6 +28,7 @@ html {
 body {
   font-size: 2em;
   margin: 0;
+  background: #E5E4E2;
 }
 
 h1, h2 {
@@ -198,8 +199,8 @@ hr {
 
 /* FOOTER */
 footer {
-  background-color: #E5E4E2;
   border-top: .1em solid #004B8B;
+  background: rgb(255, 140, 140);
 }
 
 footer p {
@@ -234,7 +235,6 @@ footer p {
   text-align: center;
   margin: 0;
   padding: 3vh 0 1vh 0;
-  background: #E5E4E2;
 }
 
 .location {
@@ -243,7 +243,6 @@ footer p {
   /* justify-content: space-around; */
   justify-content: center;
   align-items: center;
-  background: #E5E4E2;
 }
 
 .location h3 {
@@ -268,16 +267,34 @@ footer p {
 }
 
 .map {
-  margin: 3rem 6rem;
+  display: flex;
+  justify-content: center;
+  margin: 3vh;
 }
 
 /* END location.html------------------ */
 
 
 
+/* menu.html ------------------------- */
+  .main-menu {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+
+    justify-content: flex-start;
+  }
+
+  .poke-menu, .daily-menu {
+    width: 50%;
+  }
+
+
+/* END menu.html ------------------------- */
+
+
 /* -- PHOTOS -- */
 .photos {
-  /* border: 1pt solid red; */
+  border: 1pt solid red; 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
