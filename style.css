@@ -1,8 +1,12 @@
-/* maymar colors 
+/*
+maymar colors 
+
 #C61130  red
 #004B8B  blue
 #FAEA10  yellow
 #E5E4E2  gray
+
+#
 
 #CBC9C5 mid gray button
 #B4B6BB dark gray button
@@ -11,15 +15,14 @@
 /*
   References:
   creating the header bar: FollowAndrew https://www.youtube.com/watch?v=sjrp1FEHnyA
+
+  https://www.discocheetah.com/ 
+  https://www.zaytinya.com/
+  https://www.wearefoundingfarmers.com/
+
 */
 
-
-/* index.html-------------------- */
-.large {
-  display: none;
-}
-
-
+/* all pages */
 html {
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -28,7 +31,13 @@ html {
 body {
   font-size: 2em;
   margin: 0;
-  background: #E5E4E2;
+  background: rgb(245, 240, 243);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 h1, h2 {
@@ -42,16 +51,17 @@ h3, h4 {
 .header {
   position: sticky;
   top: 0;
-  background: white;
   width: 100%;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .5);
+  background: #fff;
 }
 
 .header-logo {
   width: 11em;
   height: 3.5em;
-  margin: 2vh;
+  margin: 2vh 0 2vh 2vh;
 }
+
 
 /* hamburger menu */
   .header-logo {
@@ -99,7 +109,6 @@ h3, h4 {
     position: relative;
     float: right;
     cursor: pointer;
-    /* z-index: 5; */
   }
 
 
@@ -163,6 +172,69 @@ h3, h4 {
   }
 /* END hamburger menu */
 
+/* contact */
+.contact a:link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact a:hover {
+  color: #FAEA10;
+}
+
+.contact {
+  font-size: 1.7rem;
+  background: #004B8B;
+  color: #eee;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact span {
+  margin: 1rem 2rem;
+}
+/* end contact */
+
+
+
+/* footer */
+footer {
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .5);
+  background: #fff;
+  font-size: 1.7rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  padding: 1.5vh;
+}
+
+.social-media a {
+  width: 1.5em;
+  height: 1.5em;
+  margin: .7em;
+  align-self: flex-start;
+}
+
+.copyright {
+  margin: 0;
+}
+/* end footer */
+
+/* end all pages */
+
+
+/* index.html-------------------- */
+
 .main-image {
   display: block;
   margin: 0 auto;
@@ -173,10 +245,6 @@ h3, h4 {
 
 .main-text {
   text-align: center;
-}
-
-hr {
-  border: 1pt solid #B4B6BB;
 }
 
 /* MENU */
@@ -197,35 +265,7 @@ hr {
   margin: 1em;
 }
 
-/* FOOTER */
-footer {
-  border-top: .1em solid #004B8B;
-  background: rgb(255, 140, 140);
-}
 
-footer p {
-  text-align: center;
-}
-
-.social-media {
-  display: flex;
-  justify-content: center; 
-  align-items: flex-start;
-  margin: 1vh;
-}
-
-.social-media a {
-  width: 1.5em;
-  height: 1.5em;
-  margin: .7em;
-  align-self: flex-start;
-}
-
-.copyright {
-  /* background-color: blue; */
-  margin: 0;
-}
-/* END FOOTER */
 /* END index.html ----------------*/
 
 
@@ -262,10 +302,6 @@ footer p {
   text-align: center;
 }
 
-.address {
-  /* outline: 1px solid blue; */
-}
-
 .map {
   display: flex;
   justify-content: center;
@@ -277,16 +313,40 @@ footer p {
 
 
 /* menu.html ------------------------- */
-  .main-menu {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
+.main-menu {
+  margin: 0 5%;
+}
 
-    justify-content: flex-start;
-  }
+/* h2 menu headers */
+.main-menu div h2 {
+  text-align: center;
+  text-decoration: underline;
+}
 
-  .poke-menu, .daily-menu {
-    width: 50%;
-  }
+.poke-menu-ol, .daily-menu-ul {
+  padding-left: 0;
+  margin-bottom: 5vh;
+}
+
+/* 1st level - headings */
+.menu-head {
+  margin: 3vh 3vh .5vh 3vh;
+  font-weight: bold;
+  color: #004B8B;
+}
+
+/* 3rd level - descriptions */
+.sub-menu-head ul li {
+  /* color: red; */
+  margin: .5rem 0 .5rem 0;
+}
+
+/* daily-menu headings */
+.daily-menu-ul .menu-head {
+  list-style-type: none;
+  margin-left: .5rem;
+}
+
 
 
 /* END menu.html ------------------------- */
@@ -294,7 +354,7 @@ footer p {
 
 /* -- PHOTOS -- */
 .photos {
-  border: 1pt solid red; 
+  /* border: 1pt solid red; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -318,7 +378,7 @@ footer p {
 
   /* header */
   .header {
-    height: 11vh;
+    height: 16vh;
   }
 
   .header li {
@@ -330,7 +390,7 @@ footer p {
   }
 
   .header .menu-bar {
-    margin: 2vh;
+    margin: 2.5vh;
     
     clear: none;
     float: right;
