@@ -247,22 +247,22 @@ footer p {
   text-align: center;
 }
 
-/* MENU */
-.menu {
+.main-index h3 {
+  text-align: center;
+}
+
+.quotes {
+  font-style: italic;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.menu-heading {
-  text-align: center;
-  margin: .5em;
-  text-decoration: underline;
-}
 
-.menu img {
-  border: 1pt solid black;
-  margin: 1em;
+.quotes div {
+  text-align: center;
+  width: 30rem;
+  padding: 2rem 6rem;
 }
 
 
