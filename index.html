@@ -15,9 +15,6 @@
 </head>
 
 <body>
-
-
-
   <header class="header">
     <div class="contact"> 
       <span>Phone #: <a href="tel:757-222-5543">757-222-5543</a></span>
@@ -36,39 +33,71 @@
   </header>
 
 
-
+  
 <main class="main-index">
 
-  <p class="main-text">Maymar Poke & Grill serves poke, pancit, lumpia and other classic Filipino chow. </p>
+<!-- Slideshow container -->
+<div class="slideshow-container">
 
-  <!--
-  <img class="main-image" 
-  srcset="images/poke7_1400.jpg 1400w,
-          images/poke7_703.jpg 703w
-          images/poke7_449.jpg 340w"
-  sizes="(max-width: 700px) 340px,
-         (max-width: 800px) 703px,
-         1400px"
-  src="images/poke7_1400.jpg" 
-  alt="poke image">
-  -->
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Full-width images with number -->
+  <div class="mySlides fade">
+    <img src="photos/photo1.jpg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="photos/photo2.jpg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="photos/photo3.jpg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="photos/photo6.jpg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="photos/photo12.jpg">
+  </div>
+
+</div> 
+
+<!-- The dots/circles -->
+<div class="dots">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
 
 <hr>
 
 <h3>What our customers say</h3>
 
+<div class="pilot">
+  <q>Our favorite Filipino chicken adobo in
+    Hampton Roads is served in a little
+    takeout poke stop.</q>
+  <p>- Matthew K. (<a href="https://www.pilotonline.com/food-drink/article_b1a02a44-a622-11e8-9b38-3702610ee3bb.html">Virginian-Pilot</a>)<p>
+</div>
+
 <div class="quotes">
-  <div class="q1">
-    <q>Hidden gem. Delicious poke bowls and Filipino food</q>
+  <div>
+    <q>Hidden gem. Delicious poke bowls and Filipino food.</q>
     <p>- Jesselyn B.</p>
   </div>
 
-  <div class="q2">
+  <div>
     <q>Awesome little place. Great food, you can see the quality right in front of you. Poke bowls are amazing!</q>
     <p>- Matthew B.</p>
   </div>
   
-  <div class="q3">
+  <div>
     <q>The people who work there are always nice and friendly!</q>
     <p>- John M.</p>
   </div>
@@ -80,7 +109,6 @@
 
 
 <footer>
-
 <div class="social-media">
   <!-- Credit for the SVG icons: https://www.flaticon.com/authors/freepik -->
   <a href="https://www.facebook.com/MaymarPoke/" target="_blank"><img src="images/social-icons/facebook.svg" alt="facebook"></a>
