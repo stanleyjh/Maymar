@@ -1,9 +1,9 @@
 /*
 maymar colors 
 
-#C61130  red
-#004B8B  blue
-#FAEA10  yellow
+#C61130  red (Primary)
+#004B8B  blue (Secondary)
+#FAEA10  yellow (Tertiary)
 #E5E4E2  gray
 
 #
@@ -53,7 +53,7 @@ h1, h2 {
   color: #C61130;
 }
 
-h3, h4 {
+h3 {
   color: #004B8B;
 }
 
@@ -260,7 +260,6 @@ footer p {
 .mySlides img {
   width: 100%;
   max-height: 76vh;
-  border-radius: 1vh;
   object-fit: cover;
 }
 
@@ -371,7 +370,6 @@ q + p {
 .location {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-around; */
   justify-content: center;
   align-items: center;
 }
@@ -406,6 +404,11 @@ q + p {
 /*menu.html ------------------------- */
 .main-menu {
   margin: 0 5%;
+  text-align: center;
+}
+
+.main-menu h2 {
+  text-align: center;
 }
 
 .menu-image-1 {
@@ -415,46 +418,59 @@ q + p {
   border-radius: 15rem;
 }
 
-/* h2 menu headers */
-.main-menu div h2 {
-  text-align: center;
+.sub-menu p {
+  margin: 0;
 }
 
-.poke-menu-ol, .daily-menu-ul {
-  padding-left: 0;
-  margin-bottom: 3.5vh;
-  /* border: 1pt solid red; */
-}
-
-/* 1st level - headings */
-.menu-head {
-  margin: 3vh 3vh .5vh 3vh;
-  font-weight: bold;
-  color: #004B8B;
-}
-
-/* 3rd level - descriptions */
-.sub-menu-head ul li {
-  margin: .5rem 0 .5rem 0;
-}
-
-/* daily-menu headings */
-.daily-menu-ul .menu-head {
-  list-style-type: none;
-  margin-left: .5rem;
+.main-menu p em {
+  font-size: 1.7rem; 
 }
 
 /*poke-menu */
-  .poke-menu-ol {
-    margin: 0 35%;
-  } 
+.poke-menu {
+  border: 2px solid black;
+  border-radius: 3rem;
+  margin: 3vh 0;
+  padding-bottom: 2rem;
+}
+
+.poke-menu h3 {
+  margin-bottom: 2vh;
+}
 /*end poke-menu */
 
+/*breakfast-menu */
+.breakfast-menu {
+  border: 2px solid black;
+  border-radius: 3rem;
+  margin: 3vh 0;
+  padding-bottom: 2rem;
+}
+/*end breakfast-menu  */
 
 /*daily-menu */
-.main-menu p em {
-  font-size: 1.7rem;
+.daily-menu {
+  border: 2px solid black;
+  border-radius: 3rem;
+  margin: 3vh 0;
+  padding-bottom: 2rem;
 }
+
+.daily-menu h4 {
+  margin-bottom: 0;
+}
+
+.dailySpecial {
+  color: red;
+}
+
+/* daily menu food images */
+.daily-menu img {
+  width: 25rem;
+  height: 25rem;
+  border: 1.5pt solid #000;
+}
+
 /*end daily-menu */
 
 /* END menu.html ------------------------- */
@@ -517,11 +533,24 @@ q + p {
 /* END header */
 /* END all pages */
 
+/*index.html */
+.mySlides img {
+  border-radius: 1vw;
+}
+
+
+/*end index.html  */
 
 /* location.html */
   .address {
     text-align: left;
   }
-/* END location.html */
+/*end location.html */
+
+/*menu.html */
+.main-menu {
+  margin: 0 20%;
+}
+/*end menu.html  */
 
 } /* large display */
