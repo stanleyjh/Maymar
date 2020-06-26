@@ -16,9 +16,15 @@
 
 <body>
   <header class="header">
+    <div class="contact"> 
+      <span>Phone #: <a href="tel:757-222-5543">757-222-5543</a></span>
+      <span>E-mail: <a href="mailto:maymarpoke@gmail.com">maymarpoke@gmail.com</a></span>
+    </div>
+
     <a href="index.html"><img class="header-logo" src="images/text_logo.png"></a>
 
     <input class="hamburger-btn" type="checkbox" id="hamburger-btn">
+    <!-- "for" attribute allows a link to the input above "hamburger-btn"  -->
     <label class="hamburger-icon" for="hamburger-btn"><span class="nav-icon"></span></label>
     <ul class="menu-bar">
       <li><a href="index.html">HOME</a></li>
@@ -27,28 +33,29 @@
   </header>
 
   <main class="main-menu">
+    
+    <img class="menu-image-1" src="images/poke1.jpg">
+    
     <div class="poke-menu">
       <h2>POKÉ (FISH SALAD) DAILY MENU</h2>
-
-      <ol>
-        <li>Hungry or Hangry?
+      <hr>
+      <ol class="poke-menu-ol">
+        <li class="menu-head">Hungry or Hangry?</li>
           <ul>
-            <li>Regular (2 Proteins)</li>
-            <li>$xx.xx</li>
-            <li>Large (3 Proteins)</li>
-            <li>$xx.xx</li>
+            <li>Regular (2 Proteins) $xx.xx</li>
+            <li>Large (3 Proteins) $xx.xx</li>
           </ul>
-        </li>
+        
 
-        <li>Choose your Base
+        <li class="menu-head">Choose your Base</li>
           <ul>
             <li>White Rice</li>
             <li>Brown Rice</li>
             <li>Spring Mix</li>
           </ul>
-        </li>
+        
 
-        <li>Choose your Protein*
+        <li class="menu-head">Choose your Protein*</li>
           <ul>
             <li>Tuna</li>
             <li>Salmon</li>
@@ -56,9 +63,8 @@
             <li>Tofu</li>
             <li>Octopus (when available)</li>
           </ul>
-        </li>
-
-        <li>Choose your Mix-ins
+        
+        <li class="menu-head">Choose your Mix-ins</li>
           <ul>
             <li>Watermelon Radish</li>
             <li>White Onion</li>
@@ -72,9 +78,9 @@
             <li>Mango (seasonal)</li>
             <li>Seaweed Salad</li>
           </ul>
-        </li>
+        
 
-        <li>Choose your Sauce
+        <li class="menu-head">Choose your Sauce</li>
           <ul>
             <li>House Shoyu</li>
             <li>House Ponzu</li>
@@ -83,9 +89,9 @@
             <li>Sweet Chili</li>
             <li>Sesame Oil</li>
           </ul>
-        </li>
+        
 
-        <li>Choose your Toppings
+        <li class="menu-head">Choose your Toppings</li>
           <ul>
             <li>Avocado ($x.xx)</li>
             <li>Crab Salad</li>
@@ -96,108 +102,113 @@
             <li>Fried Garlic</li>
             <li>Sesame Seeds</li>
           </ul>
-        </li>
+        
 
-        <li>Post & Enjoy!
+        <li class="menu-head">Post & Enjoy!</li>
           <ul>
             <li>(Twitter & Instagram) @Maymar_Poké</li>
             <li>(Facebook) @MaymarPokeandGrill</li>
           </ul>
-        </li>
-      </ol>
 
-      <p><em>*Consuming <strong>raw or under cooked</strong> meats, poultry, seafood, or shellfish may increase your risk of food borne illness.</em><p>
-    </div> <!-- END poke-menu -->
+      </ol>
+    </div> <!-- end poke-menu -->
 
 
     <div class="daily-menu">
       <h2>DAILY FILIPINO MENU</h2>
+      <hr>
+      <ul class="daily-menu-ul">
+        <li class="menu-head">Turo Turo Style</li>
 
-      <ul>
-        <li>Turo Turo Style
+        <ul class="sub-menu-head">
+          <li>White or Brown Rice</li>
           <ul>
-            <li>White or Brown Rice</li>
-            <ul>
-              <li>1 Entrée $x.xx</li>
-              <li>2 Entrée $x.xx</li>
-              <li>3 Entree $x.xx</li>
-            </ul>
+            <li>1 Entrée $x.xx</li>
+            <li>2 Entrée $x.xx</li>
+            <li>3 Entree $x.xx</li>
           </ul>
-        </li>
+        </ul>
+        
 
-        <li>Entrées
+        <li class="menu-head">Entrées</li>
+
+        <ul class="sub-menu-head">
+          <li>Lumpia</li>
+
           <ul>
-            <li>Lumpia</li>
-              <ul>
-                <li>Crispy fried egg roll with ground beef served with sweet and sour dipping sauce.</li>
-              </ul>
+            <li>Crispy fried egg roll with ground beef served with sweet and sour dipping sauce.</li>
           </ul>
+        </ul>
+
+        <ul class="sub-menu-head">
+          <li>Pancit Miki Bihon/Pancit Bihon</li>
 
           <ul>
-            <li>Pancit Miki Bihon/Pancit Bihon
-              <ul>
-                <li>Blend of egg(Miki) and rice(Bihon) noodles sautéed with pork and vegetables.</li>
-              </ul>
-            </li>
+            <li>Blend of egg(Miki) and rice(Bihon) noodles sautéed with pork and vegetables.</li>
           </ul>
+        </ul>
+
+        <ul class="sub-menu-head">
+          <li>Chicken Adobo</li>
 
           <ul>
-            <li>Chicken Adobo
-              <ul>
-                <li>Stewed chicken in soy sauce and vinegar mixed with pepper-corn and bay leaf. A FILIPINO CLASSIC!</li>
-              </ul>
-            </li>
+            <li>Stewed chicken in soy sauce and vinegar mixed with pepper-corn and bay leaf. A FILIPINO CLASSIC!</li>
           </ul>
+        </ul>
+
+        <ul class="sub-menu-head">
+          <li>Picadillo</li>
 
           <ul>
-            <li>Picadillo
-              <ul>
-                <li>Pinoy style group beef with potatoes and bell peppers.</li>
-              </ul>
-            </li>
+            <li>Pinoy style group beef with potatoes and bell peppers.</li>
           </ul>
+        </ul>
+
+        <ul class="sub-menu-head">
+          <li>Pork Steak</li>
 
           <ul>
-            <li>Pork Steak
-              <ul>
-                <li>Pan fried pork marinated with soy sauce, lemon, and onions.</li>
-              </ul>
-            </li>
+            <li>Pan fried pork marinated with soy sauce, lemon, and onions.</li>
           </ul>
+        </ul>
+
+        <ul class="sub-menu-head">
+          <li>Menudo/Mechado</li>
 
           <ul>
-            <li>Menudo/Mechado
-              <ul>
-                <li>Stewed prok with potatoes, carrots and bell peppers.</li>
-              </ul>
-            </li>
+            <li>Stewed prok with potatoes, carrots and bell peppers.</li>
           </ul>
+        </ul>
+
+        <ul class="sub-menu-head">
+          <li>Inihaw o Pritong Isda</li>
 
           <ul>
-            <li>Inihaw o Pritong Isda
-              <ul>
-                <li>Grilled or fried fish. Selection is subject to change.</li>
-              </ul>
-            </li>
+            <li>Grilled or fried fish. Selection is subject to change.</li>
           </ul>
-        </li>
+        </ul>
 
-        <li>Filipino Soup of the Day
-          <ul>
+         <!-- End entrees -->
+
+        <li class="menu-head">Filipino Soup of the Day</li>
+
+          <ul class="sub-menu-head">
             <li>Chicken Tinola</li>
             <li>Nilagang Beef</li>
             <li>Sinigang Na Baboy</li>
           </ul>
-        </li>
+        
 
-        <li>Daily Special
-          <ul>
+        <li class="menu-head">Daily Special</li>
+
+          <ul class="sub-menu-head">
             <li>Ask what surprise is waiting for you to enjoy!</li>
           </ul>
-        </li>
+        
 
-        <li>Breakfast (Saturday & Sunday 8:00am - 11:00am)
-          <ul>
+        <li class="menu-head">Breakfast (Saturday & Sunday 8:00am - 11:00am)</li>
+
+          <ul class="sub-menu-head">
             <li>Sinagag</li>
             <li>Tapa</li>
             <li>Tocino</li>
@@ -206,13 +217,26 @@
             <li>Fried Egg</li>
             <li>Scrambled Egg</li>
           </ul>
-        </li>
 
-      </ul>
-    </div> <!-- end of daily-menu -->
+      </ul> <!-- end dail-menu-ul -->
+    </div> <!-- End of daily-menu -->
 
+    <p>
+      <em>*Consuming <strong>raw or under cooked</strong> meats, poultry, seafood, or shellfish may increase your risk of food borne illness.</em>
+    </p>
   </main>
 
+  <footer>
+    <div class="social-media">
+      <!-- Credit for the SVG icons: https://www.flaticon.com/authors/freepik -->
+      <a href="https://www.facebook.com/MaymarPoke/" target="_blank"><img src="images/social-icons/facebook.svg" alt="facebook"></a>
+      <a href="https://www.instagram.com/explore/locations/123161578355986/maymar-poke-and-grill?hl=en" target="_blank"><img src="images/social-icons/instagram.svg" alt="instagram"></a>
+      <a href="https://twitter.com/hashtag/maymarpoke" target="_blank"><img src="images/social-icons/twitter.svg"></a>
+      <a href="https://www.yelp.com/biz/maymar-poke-and-grill-norfolk" target="_blank"><img src="images/social-icons/yelp.svg"></a>
+    </div>
+    
+    <p class="copyright">&copy; All rights reserved. Website created by Stanley Ho.</p>
+  </footer>
 
 </body>
 </html>
