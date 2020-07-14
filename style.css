@@ -28,6 +28,9 @@ maymar colors
   horizontal lines:
   https://css-tricks.com/examples/hrs/
 
+  credit for pictures:
+  cartoon fish picture: https://flyclipart.com/download-png#fish-bake-cliparts-662137.png 
+  picadillo: https://www.manilaspoon.com/2019/04/instant-pot-filipino-style-picadillo.html
 */
 
 /* all pages */
@@ -385,6 +388,13 @@ q + p {
   padding: 3vh 0 1vh 0;
 }
 
+.location-photo {
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
 .location {
   display: flex;
   flex-wrap: wrap;
@@ -432,7 +442,7 @@ q + p {
 .menu-image-1 {
   margin: 3vh auto;
   display: block;
-  width: 20rem;
+  width: 30rem;
   border-radius: 15rem;
 }
 
@@ -457,15 +467,6 @@ q + p {
 }
 /*end poke-menu */
 
-/*breakfast-menu */
-.breakfast-menu {
-  border: 2px solid black;
-  border-radius: 3rem;
-  margin: 3vh 0;
-  padding-bottom: 2rem;
-}
-/*end breakfast-menu  */
-
 /*daily-menu */
 .daily-menu {
   border: 2px solid black;
@@ -480,9 +481,8 @@ q + p {
 
 /* daily menu food images */
 .daily-menu img {
-  width: 25rem;
-  height: 25rem;
-  border: 1.5pt solid #000;
+  width: 80%;
+  border-radius: 3rem;
 }
 
 /*end daily-menu */
@@ -540,14 +540,23 @@ q + p {
 /*end index.html  */
 
 /* location.html */
-  .address {
-    text-align: left;
-  }
+.location-photo {
+  max-width: 55%;
+  border-radius: 1rem;
+}
+
+.address {
+  text-align: left;
+}
 /*end location.html */
 
 /*menu.html */
 .main-menu {
   margin: 0 20%;
+}
+
+.daily-menu img {
+  max-width: 50%;
 }
 /*end menu.html  */
 
