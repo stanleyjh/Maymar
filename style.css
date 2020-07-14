@@ -1,0 +1,563 @@
+/*
+maymar colors 
+
+#C61130  red (Primary)
+#004B8B  blue (Secondary)
+#FAEA10  yellow (Tertiary)
+#E5E4E2  gray
+
+#
+
+#CBC9C5 mid gray button
+#B4B6BB dark gray button
+*/
+
+/*
+  References:
+  creating the header bar: FollowAndrew 
+  https://www.youtube.com/watch?v=sjrp1FEHnyA
+
+  website inspirations:
+  https://www.discocheetah.com/ 
+  https://www.zaytinya.com/
+  https://www.wearefoundingfarmers.com/
+
+  credit for the slideshow: 
+  https://www.w3schools.com/howto/howto_js_slideshow.asp 
+
+  horizontal lines:
+  https://css-tricks.com/examples/hrs/
+
+  credit for pictures:
+  cartoon fish picture: https://flyclipart.com/download-png#fish-bake-cliparts-662137.png 
+  picadillo: https://www.manilaspoon.com/2019/04/instant-pot-filipino-style-picadillo.html
+*/
+
+/* all pages */
+html {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-size: 2em;
+  margin: 0;
+  background: rgb(245, 240, 243);
+}
+
+/* horizontal lines */
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+h1, h2 {
+  color: #C61130;
+}
+
+h3 {
+  color: #004B8B;
+}
+
+/* header */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .5);
+  background: #fff;
+  z-index: 1;
+}
+
+/* contact */
+.contact a:link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact a:hover {
+  color: #FAEA10;
+}
+
+.contact {
+  font-size: 1.7rem;
+  background: #004B8B;
+  color: #eee;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact span {
+  margin: 1rem 2rem;
+}
+/* end contact */
+
+.header-logo {
+  float: left;
+  width: 11em;
+  height: 3.5em;
+  margin: 2vh 0 2vh 2vh;
+  /* allows the hamburger menu to hover over the header-logo because the absolute position keeps the logo in that position. */
+  position: absolute;
+}
+
+/* hamburger menu */
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    font-weight: bold;
+  }
+  
+  .menu-bar li:first-child a {
+    border-top: 2px solid #aaa;
+  }
+
+  .menu-bar li a {
+    /* a tags are normally inline. setting it to block allows you to click on the white area next to it */
+    display: block;
+    padding: 2vh;
+    border-right: 1px solid #aaa;
+    text-decoration: none;
+    border: 1px solid #aaa;
+    text-align: center;
+    color: #C61130;
+  }
+
+  .menu-bar a:hover {
+    color: #004B8B;
+  }
+
+  .header .menu-bar {
+    clear: both;
+    max-height: 0px;
+    /* menu-bar transition speed */
+    transition: max-height .4s ease-out;
+  }
+
+  .header .hamburger-icon {
+    padding: 5rem 3rem;
+    /* position is relative so the children can be set as absolute */
+    position: relative;
+    float: right;
+    cursor: pointer;
+  }
+
+  /* nav-icon */
+  .header .hamburger-icon .nav-icon {
+    background: #C61130;
+    display: block;
+    height: 2px;
+    width: 30px;
+    position: relative;
+    transition: background .05s ease-out;
+  }
+
+  .header .hamburger-icon .nav-icon::before {
+    background: #C61130;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 8px;
+  }
+
+  .header .hamburger-icon .nav-icon::after {
+    background: #C61130;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -8px;
+  }
+
+  .header .hamburger-btn {
+    display: none;
+  }
+
+  /*  the tilde separates two sequences of selectors. the elements represented by the two sequences share the same parent in the document tree.
+  first-sequence occurs THEN(~) second sequence. */
+  .header .hamburger-btn:checked ~ .menu-bar {
+    max-height: 400px;
+  }
+
+  /* nav-icon animation */
+  .header .hamburger-btn:checked ~ .hamburger-icon .nav-icon {
+    background: transparent;
+  }
+
+  .header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::before {
+    background: #004B8B;
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::after {
+    background: #004B8B;
+    transform: rotate(45deg);
+    top: 0;
+  }
+/* END hamburger menu */
+
+/* end header */
+
+/* main */
+/* alerts to add an announcement to the top of each page. Just enable and change the content */
+.alerts::before {
+  /* content: "ATTENTION: THIS IS AN ANNOUNCEMENT"; */
+  text-shadow: 1.5px 1.5px black;
+  color: #fff;
+  font-weight: bolder;
+  display: block;
+  text-align: center;
+  background: #C61130;
+}
+
+/* end main */
+
+/* footer */
+footer {
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .5);
+  background: #fff;
+  font-size: 1.7rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  /* padding: 1vh; */
+}
+
+.social-media a {
+  width: 1.5em;
+  height: 1.5em;
+  margin: .7em;
+  align-self: flex-start;
+}
+
+.stanley {
+  margin: 1vh;
+}
+
+.copyright {
+  margin: 0;
+}
+/* end footer */
+/* end all pages */
+
+
+/*index.html-------------------- */
+
+.main-text {
+  text-align: center;
+}
+
+.main-index h3 {
+  text-align: center;
+}
+
+/* slideshow */
+.slideshow-container {
+  max-width: 960px;
+  position: relative;
+  margin: auto;
+  padding-top: 2.5vh;
+}
+
+.mySlides img {
+  width: 100%;
+  max-height: 76vh;
+  object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  text-align: center;
+  margin: 1.5vh;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: .3s;
+  animation-name: fade;
+  animation-duration: .3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* END slideshow */
+
+/* quotes */
+.pilot {
+  font-style: italic;
+  text-align: center;
+  padding: 0 15%; 
+}
+
+q + p {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.quotes {
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+} 
+
+.quotes div {
+  text-align: center;
+  width: 30rem;
+  padding: 2rem 6rem;
+}
+/* END quotes */
+
+/* END index.html ----------------*/
+
+
+
+/* location.html ---------------- */
+.location-header {
+  text-align: center;
+  margin: 0;
+  padding: 3vh 0 1vh 0;
+}
+
+.location-photo {
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.location {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.location h3 {
+  margin: 1rem 0 ;
+}
+
+.time {
+  text-align: center;
+}
+
+.time p {
+  margin: .5rem 0;
+}
+
+.time, .address {
+  margin: 1rem 6rem;
+  text-align: center;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  margin: 5vh 3vh;
+}
+
+/* END location.html------------------ */
+
+
+
+/*menu.html ------------------------- */
+.main-menu {
+  margin: 0 5%;
+  text-align: center;
+}
+
+.main-menu h2 {
+  text-align: center;
+}
+
+.menu-image-1 {
+  margin: 3vh auto;
+  display: block;
+  width: 30rem;
+  border-radius: 15rem;
+}
+
+.sub-menu p {
+  margin: 0;
+}
+
+.main-menu p em {
+  font-size: 1.7rem; 
+}
+
+/*poke-menu */
+.poke-menu {
+  border: 2px solid black;
+  border-radius: 3rem;
+  margin: 3vh 0;
+  padding-bottom: 2rem;
+}
+
+.poke-menu h3 {
+  margin-bottom: 2vh;
+}
+/*end poke-menu */
+
+/*daily-menu */
+.daily-menu {
+  border: 2px solid black;
+  border-radius: 3rem;
+  margin: 3vh 0;
+  padding-bottom: 2rem;
+}
+
+.daily-menu h4 {
+  margin-bottom: 0;
+}
+
+/* daily menu food images */
+.daily-menu img {
+  width: 80%;
+  border-radius: 3rem;
+}
+
+/*end daily-menu */
+
+/* END menu.html ------------------------- */
+
+
+/* large display */
+@media (min-width: 960px) {
+
+/* all pages */
+.large {
+  display: block;
+}
+
+/* header */
+.header {
+  height: 152px;
+}
+
+.header li {
+  float: left;
+}
+
+.header li a {
+  padding: 20px 30px;
+}
+
+.header .menu-bar {
+  margin: 2.5vh;
+  
+  clear: none;
+  float: right;
+  max-height: none;
+}
+
+.header .menu-bar li a {
+  border: none;
+  outline: none;
+  border-radius: 2vh;
+}
+
+.header .hamburger-icon {
+  display: none;
+}
+/* END header */
+/* END all pages */
+
+/*index.html */
+.mySlides img {
+  border-radius: 1vw;
+}
+
+
+/*end index.html  */
+
+/* location.html */
+.location-photo {
+  max-width: 55%;
+  border-radius: 1rem;
+}
+
+.address {
+  text-align: left;
+}
+/*end location.html */
+
+/*menu.html */
+.main-menu {
+  margin: 0 20%;
+}
+
+.daily-menu img {
+  max-width: 50%;
+}
+/*end menu.html  */
+
+} /* large display */
