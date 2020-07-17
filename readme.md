@@ -4,3 +4,5 @@ This is a website for a restaurant called Maymar Poke and Grill in Norfolk, VA. 
 It has the best Filipino food!
 
 The site is hosted on bluehost and the domain was purchased from google domains.
+
+The part that took the longest was trying to align all the elements properly using CSS. Piece by piece, it all came together!
