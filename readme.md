@@ -5,4 +5,4 @@ It has the best Filipino food!
 
 The site is hosted on bluehost and the domain was purchased from google domains.
 
-The part that took the longest was trying to align all the elements properly using CSS. Piece by piece, it all came together!
+The part that took the longest was trying to align all the elements properly using CSS. Piece by piece, it all came together.
