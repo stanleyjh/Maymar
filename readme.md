@@ -1,3 +1,3 @@
 My first official website creation! Check it out! www.maymarpoke.com
 
-This is a website for a restaurant called Maymar Poke and Grill in Norfolk, VA. I wanted to create a clean looking website that allowed customers to view information about the restaurant and the delicious cuisine it has to offer.
+A website I developed for a client using HTML, CSS, and JavaScript. I focused on a mobile-first design and used flexbox to snap elements into place. Using google business insights, I saw a 40% increase in phone call volume and requests for directions to the restaurant since the website was created.
