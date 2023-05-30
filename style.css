@@ -48,15 +48,21 @@ body {
 hr {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
 }
 
-h1, h2 {
-  color: #C61130;
+h1,
+h2 {
+  color: #c61130;
 }
 
 h3 {
-  color: #004B8B;
+  color: #004b8b;
 }
 
 /* header */
@@ -64,7 +70,7 @@ h3 {
   position: sticky;
   top: 0;
   width: 100%;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .5);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.5);
   background: #fff;
   z-index: 1;
 }
@@ -76,12 +82,12 @@ h3 {
 }
 
 .contact a:hover {
-  color: #FAEA10;
+  color: #faea10;
 }
 
 .contact {
   font-size: 1.7rem;
-  background: #004B8B;
+  background: #004b8b;
   color: #eee;
 
   display: flex;
@@ -105,106 +111,106 @@ h3 {
 }
 
 /* hamburger menu */
-  .header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    font-weight: bold;
-  }
-  
-  .menu-bar li:first-child a {
-    border-top: 2px solid #aaa;
-  }
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  font-weight: bold;
+}
 
-  .menu-bar li a {
-    /* a tags are normally inline. setting it to block allows you to click on the white area next to it */
-    display: block;
-    padding: 2vh;
-    border-right: 1px solid #aaa;
-    text-decoration: none;
-    border: 1px solid #aaa;
-    text-align: center;
-    color: #C61130;
-  }
+.menu-bar li:first-child a {
+  border-top: 2px solid #aaa;
+}
 
-  .menu-bar a:hover {
-    color: #004B8B;
-  }
+.menu-bar li a {
+  /* a tags are normally inline. setting it to block allows you to click on the white area next to it */
+  display: block;
+  padding: 2vh;
+  border-right: 1px solid #aaa;
+  text-decoration: none;
+  border: 1px solid #aaa;
+  text-align: center;
+  color: #c61130;
+}
 
-  .header .menu-bar {
-    clear: both;
-    max-height: 0px;
-    /* menu-bar transition speed */
-    transition: max-height .4s ease-out;
-  }
+.menu-bar a:hover {
+  color: #004b8b;
+}
 
-  .header .hamburger-icon {
-    padding: 5rem 3rem;
-    /* position is relative so the children can be set as absolute */
-    position: relative;
-    float: right;
-    cursor: pointer;
-  }
+.header .menu-bar {
+  clear: both;
+  max-height: 0px;
+  /* menu-bar transition speed */
+  transition: max-height 0.4s ease-out;
+}
 
-  /* nav-icon */
-  .header .hamburger-icon .nav-icon {
-    background: #C61130;
-    display: block;
-    height: 2px;
-    width: 30px;
-    position: relative;
-    transition: background .05s ease-out;
-  }
+.header .hamburger-icon {
+  padding: 5rem 3rem;
+  /* position is relative so the children can be set as absolute */
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
 
-  .header .hamburger-icon .nav-icon::before {
-    background: #C61130;
-    content: "";
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    top: 8px;
-  }
+/* nav-icon */
+.header .hamburger-icon .nav-icon {
+  background: #c61130;
+  display: block;
+  height: 2px;
+  width: 30px;
+  position: relative;
+  transition: background 0.05s ease-out;
+}
 
-  .header .hamburger-icon .nav-icon::after {
-    background: #C61130;
-    content: "";
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    top: -8px;
-  }
+.header .hamburger-icon .nav-icon::before {
+  background: #c61130;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: 8px;
+}
 
-  .header .hamburger-btn {
-    display: none;
-  }
+.header .hamburger-icon .nav-icon::after {
+  background: #c61130;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: -8px;
+}
 
-  /*  the tilde separates two sequences of selectors. the elements represented by the two sequences share the same parent in the document tree.
+.header .hamburger-btn {
+  display: none;
+}
+
+/*  the tilde separates two sequences of selectors. the elements represented by the two sequences share the same parent in the document tree.
   first-sequence occurs THEN(~) second sequence. */
-  .header .hamburger-btn:checked ~ .menu-bar {
-    max-height: 400px;
-  }
+.header .hamburger-btn:checked ~ .menu-bar {
+  max-height: 400px;
+}
 
-  /* nav-icon animation */
-  .header .hamburger-btn:checked ~ .hamburger-icon .nav-icon {
-    background: transparent;
-  }
+/* nav-icon animation */
+.header .hamburger-btn:checked ~ .hamburger-icon .nav-icon {
+  background: transparent;
+}
 
-  .header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::before {
-    background: #004B8B;
-    transform: rotate(-45deg);
-    top: 0;
-  }
+.header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::before {
+  background: #004b8b;
+  transform: rotate(-45deg);
+  top: 0;
+}
 
-  .header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::after {
-    background: #004B8B;
-    transform: rotate(45deg);
-    top: 0;
-  }
+.header .hamburger-btn:checked ~ .hamburger-icon .nav-icon::after {
+  background: #004b8b;
+  transform: rotate(45deg);
+  top: 0;
+}
 /* END hamburger menu */
 
 /* end header */
@@ -218,14 +224,14 @@ h3 {
   font-weight: bolder;
   display: block;
   text-align: center;
-  background: #C61130;
+  background: #c61130;
 }
 
 /* end main */
 
 /* footer */
 footer {
-  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .5);
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);
   background: #fff;
   font-size: 1.7rem;
 }
@@ -236,7 +242,7 @@ footer p {
 
 .social-media {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: flex-start;
   /* padding: 1vh; */
 }
@@ -244,7 +250,7 @@ footer p {
 .social-media a {
   width: 1.5em;
   height: 1.5em;
-  margin: .7em;
+  margin: 0.7em;
   align-self: flex-start;
 }
 
@@ -252,12 +258,15 @@ footer p {
   margin: 1vh;
 }
 
+.stanley a {
+  text-decoration: none;
+}
+
 .copyright {
   margin: 0;
 }
 /* end footer */
 /* end all pages */
-
 
 /*index.html-------------------- */
 
@@ -284,7 +293,8 @@ footer p {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -306,8 +316,9 @@ footer p {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* The dots/bullets/indicators */
@@ -327,26 +338,35 @@ footer p {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: .3s;
+  -webkit-animation-duration: 0.3s;
   animation-name: fade;
-  animation-duration: .3s;
+  animation-duration: 0.3s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /* END slideshow */
 
@@ -354,7 +374,7 @@ footer p {
 .pilot {
   font-style: italic;
   text-align: center;
-  padding: 0 15%; 
+  padding: 0 15%;
 }
 
 q + p {
@@ -367,7 +387,7 @@ q + p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-} 
+}
 
 .quotes div {
   text-align: center;
@@ -377,8 +397,6 @@ q + p {
 /* END quotes */
 
 /* END index.html ----------------*/
-
-
 
 /* location.html ---------------- */
 .location-header {
@@ -402,7 +420,7 @@ q + p {
 }
 
 .location h3 {
-  margin: 1rem 0 ;
+  margin: 1rem 0;
 }
 
 .time {
@@ -410,10 +428,11 @@ q + p {
 }
 
 .time p {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
-.time, .address {
+.time,
+.address {
   margin: 1rem 6rem;
   text-align: center;
 }
@@ -425,8 +444,6 @@ q + p {
 }
 
 /* END location.html------------------ */
-
-
 
 /*menu.html ------------------------- */
 .main-menu {
@@ -450,7 +467,7 @@ q + p {
 }
 
 .main-menu p em {
-  font-size: 1.7rem; 
+  font-size: 1.7rem;
 }
 
 /*poke-menu */
@@ -488,75 +505,71 @@ q + p {
 
 /* END menu.html ------------------------- */
 
-
 /* large display */
 @media (min-width: 960px) {
+  /* all pages */
+  .large {
+    display: block;
+  }
 
-/* all pages */
-.large {
-  display: block;
-}
+  /* header */
+  .header {
+    height: 152px;
+  }
 
-/* header */
-.header {
-  height: 152px;
-}
+  .header li {
+    float: left;
+  }
 
-.header li {
-  float: left;
-}
+  .header li a {
+    padding: 20px 30px;
+  }
 
-.header li a {
-  padding: 20px 30px;
-}
+  .header .menu-bar {
+    margin: 2.5vh;
 
-.header .menu-bar {
-  margin: 2.5vh;
-  
-  clear: none;
-  float: right;
-  max-height: none;
-}
+    clear: none;
+    float: right;
+    max-height: none;
+  }
 
-.header .menu-bar li a {
-  border: none;
-  outline: none;
-  border-radius: 2vh;
-}
+  .header .menu-bar li a {
+    border: none;
+    outline: none;
+    border-radius: 2vh;
+  }
 
-.header .hamburger-icon {
-  display: none;
-}
-/* END header */
-/* END all pages */
+  .header .hamburger-icon {
+    display: none;
+  }
+  /* END header */
+  /* END all pages */
 
-/*index.html */
-.mySlides img {
-  border-radius: 1vw;
-}
+  /*index.html */
+  .mySlides img {
+    border-radius: 1vw;
+  }
 
+  /*end index.html  */
 
-/*end index.html  */
+  /* location.html */
+  .location-photo {
+    max-width: 55%;
+    border-radius: 1rem;
+  }
 
-/* location.html */
-.location-photo {
-  max-width: 55%;
-  border-radius: 1rem;
-}
+  .address {
+    text-align: left;
+  }
+  /*end location.html */
 
-.address {
-  text-align: left;
-}
-/*end location.html */
+  /*menu.html */
+  .main-menu {
+    margin: 0 20%;
+  }
 
-/*menu.html */
-.main-menu {
-  margin: 0 20%;
-}
-
-.daily-menu img {
-  max-width: 50%;
-}
-/*end menu.html  */
-
+  .daily-menu img {
+    max-width: 50%;
+  }
+  /*end menu.html  */
 } /* large display */
