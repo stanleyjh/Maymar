@@ -194,8 +194,12 @@
     
     <p class="stanley">Website Created By <a href="https://stanleyho.org" target="_blank">Stanley Ho</a></p>
 
-    <p class="copyright">&copy; 2022 Maymar Poké and Grill. All Rights Reserved</p>
+    <p class="copyright">&copy; <span id="copyrightYear"></span> Maymar Poké and Grill. All Rights Reserved</p>
   </footer>
-
+    <script>
+      // inline JS for updating copyright year.
+      document.getElementById("copyrightYear").innerHTML =
+        new Date().getFullYear();
+    </script>
 </body>
 </html>
